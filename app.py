@@ -10,7 +10,7 @@ scaler = joblib.load("scaler.pkl")
 st.title("Predicción de Perfil de Horas")
 
 # Simular fondo con st.image
-st.image("fondo.jpg", use_column_width=True, output_format="auto")
+st.image("fondo.jpg", use_container_width=True, output_format="auto")
 
 st.write("## Complete el formulario:")
 
