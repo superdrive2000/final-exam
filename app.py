@@ -6,35 +6,8 @@ import pandas as pd
 modelo = joblib.load("mlp_model_6features.pkl")
 scaler = joblib.load("scaler.pkl")
 
-# CSS para fondo e interfaz
-page_bg = """
-<style>
-/* Imagen de fondo */
-.stApp {
-    background-image: url("fondo.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-/* Centrar y estilizar botón */
-div.stButton > button {
-    display: block;
-    margin: 0 auto;  /* Centrado */
-    background-color: #28a745; /* Verde */
-    color: white;
-    font-size: 20px;  /* Más grande */
-    font-weight: bold;
-    padding: 10px 30px;
-    border-radius: 12px;
-    border: none;
-}
-div.stButton > button:hover {
-    background-color: #218838; /* Verde más oscuro al pasar mouse */
-}
-</style>
-"""
-st.markdown(page_bg, unsafe_allow_html=True)
+# Imagen de fondo simulada
+st.image("fondo.jpg", use_column_width=True)
 
 
 # Título de la app
@@ -70,4 +43,4 @@ if submitted:
     
     perfil_horas = modelo.predict(nueva_farmacia)
 
-    st.success(f"El Perfil de Horas estimado es: **{perfil_horas}**")
+    st.success(f"El Perfil de Horas estimado es: **{perfil_horas[0]}**")

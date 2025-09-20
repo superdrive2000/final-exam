@@ -16,4 +16,4 @@ nueva_farmacia = scaler.transform(pd.DataFrame([nueva_farmacia]))
     
 perfil_horas = modelo.predict(nueva_farmacia)
 
-print(perfil_horas)
+print(perfil_horas[0])
