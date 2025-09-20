@@ -60,10 +60,9 @@ if submitted:
     
     nueva_farmacia = [tipo_farmacia_val, venta_mensual, transacciones,
                    headcount, sucursal_val, cluster]
-    
-    pd.DataFrame([nueva_farmacia])
 
-    nuevo_farmacia = scaler.transform(pd.DataFrame([nueva_farmacia]))
+
+    nueva_farmacia = scaler.transform(pd.DataFrame([nueva_farmacia]))
 
     # Hacemos una predicción de la especie del 'nuevo_pinguino' con el método 'predict' del modelo 'mlp'
     # Guardamos la predicción en la variable 'nueva_prediccion'
