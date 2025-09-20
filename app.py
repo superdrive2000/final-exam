@@ -1,5 +1,37 @@
 import streamlit as st
 
+
+# CSS para fondo e interfaz
+page_bg = """
+<style>
+/* Imagen de fondo */
+.stApp {
+    background-image: url("fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Centrar y estilizar botón */
+div.stButton > button {
+    display: block;
+    margin: 0 auto;  /* Centrado */
+    background-color: #28a745; /* Verde */
+    color: white;
+    font-size: 20px;  /* Más grande */
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 12px;
+    border: none;
+}
+div.stButton > button:hover {
+    background-color: #218838; /* Verde más oscuro al pasar mouse */
+}
+</style>
+"""
+st.markdown(page_bg, unsafe_allow_html=True)
+
+
 # Título de la app
 st.title("Predicción de Perfil de Horas")
 st.write("Complete el siguiente formulario para obtener el perfil de horas de la farmacia.")
